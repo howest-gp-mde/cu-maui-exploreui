@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mde.ExploreUI.Pages.Layouts.GridLayoutPage"
+             Title="GridLayoutPage">
+    <VerticalStackLayout>
+        <ScrollView>
+            <Grid ColumnSpacing="2" RowSpacing="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <!--fill space, but 2x higher as second row-->
+                    <RowDefinition Height="*" />
+                    <!-- fill space-->
+                    <RowDefinition Height="200" />
+                    <!-- exactly 200px -->
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <!-- adjust to child sizes-->
+                    <ColumnDefinition Width="*" />
+                    <!-- fill space evenly-->
+                    <ColumnDefinition Width="*" />
+                    <!-- fill space evenly-->
+                </Grid.ColumnDefinitions>
+                <ContentView Padding="5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" >
+                    <!-- the ContentView acts as a division with padding -->
+                    <Label Text="This is a grid. try scrolling and rotating the device!" HorizontalTextAlignment="Center" />
+                </ContentView>
+                <StackLayout Grid.Row="1" Grid.Column="0" Grid.RowSpan="3" Spacing="2">
+                    <BoxView WidthRequest="40" HeightRequest="40" Color="Red"></BoxView>
+                    <BoxView WidthRequest="40" HeightRequest="80" Color="Red"></BoxView>
+                </StackLayout>
+                <Label Text="Top Left" Grid.Row="1" Grid.Column="1" BackgroundColor="Blue" TextColor="White" />
+                <Label Text="Top Right" Grid.Row="1" Grid.Column="2" BackgroundColor="Blue" TextColor="White" />
+                <Label Text="Center Left" Grid.Row="2" Grid.Column="1" BackgroundColor="DarkGreen" TextColor="White" />
+                <Label Text="Center Right" Grid.Row="2" Grid.Column="2" BackgroundColor="DarkGreen" TextColor="White" />
+                <Label Text="Center Left" Grid.Row="3" Grid.Column="1" BackgroundColor="DarkGreen" TextColor="White" />
+                <Label Text="Center Right" Grid.Row="3" Grid.Column="2" BackgroundColor="DarkGreen" TextColor="White" />
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

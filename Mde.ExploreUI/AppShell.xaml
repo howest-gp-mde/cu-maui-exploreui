@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Mde.ExploreUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Mde.ExploreUI.Pages.Layouts"
+    Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem Route="layouts" Title="Layout">
+        <Tab Route="absolute" Title="Absolute Layout">
+            <ShellContent ContentTemplate="{DataTemplate local:AbsoluteLayoutPage}" />
+        </Tab>
+        <Tab Route="flex" Title="Flex Layout">
+            <ShellContent ContentTemplate="{DataTemplate local:FlexLayoutPage}" />
+        </Tab>
+        <Tab Route="stack" Title="Stack Layout">
+            <ShellContent ContentTemplate="{DataTemplate local:StackLayoutPage}" />
+        </Tab>
+        <Tab Route="grid" Title="Grid Layout">
+            <ShellContent ContentTemplate="{DataTemplate local:GridLayoutPage}" />
+        </Tab>
+        <Tab Route="frame" Title="Frame Layout">
+            <ShellContent ContentTemplate="{DataTemplate local:FrameLayoutPage}" />
+        </Tab>
+    </FlyoutItem>
+    
+</Shell>
