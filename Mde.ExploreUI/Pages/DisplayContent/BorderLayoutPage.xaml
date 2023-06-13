@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mde.ExploreUI.Pages.DisplayContent.BorderLayoutPage"
+             Title="Borders!">
+
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" Padding="20">
+
+            <Border Stroke="#C49B33"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 20,0,0,20"
+                    Background="#2B0B98"
+                    HorizontalOptions="Center">
+                <Grid Padding="20">
+                    <Label Text="Borders!"
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold" />
+                </Grid>
+            </Border>
+
+            <Label Margin="0,10" 
+                   Text="Borders are used to wrap a Layout with a thickness and color. They also feature shadow, shapes such as rounded corners and other options."/>
+
+            <Label Margin="0,10" 
+                   Text="Always set a Layout (Grid, VerticalStackLayout, HorizontalStackLayout, ...) as the first child element"/>
+
+
+            <Label Margin="0,10" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Shapes and Shadows" ></Label>
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="As with most elements, a Border has a Shadow property. It can also be clipped to a shape using the StrokeShape property." ></Label>
+
+            <Border Margin="0"
+                   Stroke="#2B0B98"
+                   HeightRequest="150"
+                   StrokeThickness="5"
+                   HorizontalOptions="Fill">
+                <!-- setting the StrokeShape using the Element property notation -->
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20"></RoundRectangle>
+                </Border.StrokeShape>
+                <!-- setting the Shadow using the Element property notation -->
+                <Border.Shadow>
+                    <Shadow Offset="15,15" Radius="17" Opacity="0.55" Brush="#333"></Shadow>
+                </Border.Shadow>
+                <!-- good practice: put a Layout inside a border -->
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Background="Transparent" Padding="10,0,0,10" TextColor="#333"
+                           HorizontalTextAlignment="Start"
+                           Text="Explore the documentation" />
+                    <Label Background="#2B0B98" Padding="15" TextColor="#fff"
+                           HorizontalTextAlignment="Center"
+                           Text="Use your imagination" />
+                    <Label Background="Transparent" Padding="0,10,10,0" TextColor="#333"
+                           HorizontalTextAlignment="End"
+                           Text="Enjoy your creation" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Border helps preserve the strokeshape for shadows around clipped objects." ></Label>
+
+            <Border Margin="10"
+                   Stroke="#2B0B98"
+                   StrokeThickness="5"
+                   HorizontalOptions="Center">
+                <!-- setting the StrokeShape using the Element property notation -->
+                <Border.StrokeShape>
+                    <Polygon Points="40,10 200,200 10,175" />
+                </Border.StrokeShape>
+                <!-- setting the Shadow using the Element property notation -->
+                <Border.Shadow>
+                    <Shadow Offset="40,-10" Radius="17" Opacity="0.35" Brush="#333" />
+                </Border.Shadow>
+                <!-- good practice: wrap a Layout inside a border -->
+                <Grid>
+                    <Image Source="theshard"
+                           Aspect="AspectFill"
+                           HeightRequest="200"
+                           WidthRequest="200" />
+                </Grid>
+            </Border>
+
+            <Label Margin="0,10" FontSize="18" HorizontalTextAlignment="Center" Text="Card views" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Border is very helpful to present your content in a card-like view."/>
+
+            <!-- notice the inline StrokeShape property. Each border radius is to 20px -->
+            <Border Margin="10"
+                   Stroke="#2B0B98"
+                   StrokeThickness="5"
+                   StrokeShape="RoundRectangle 20"
+                   HorizontalOptions="Fill">
+                <!-- setting the shadow using the Element property notation -->
+                <Border.Shadow>
+                    <Shadow Offset="10,10" Radius="5" Opacity="0.65" Brush="#000"></Shadow>
+                </Border.Shadow>
+                <!-- card content is built up with various layouts and controls -->
+                <Grid ColumnDefinitions="1*, 2*" HorizontalOptions="Fill" Background="White">
+                    <Image Grid.Column="0"
+                         Margin="0"
+                         Source="yggdrasil" 
+                         Aspect="AspectFill" />
+                    <FlexLayout Grid.Column="1"
+                                Margin="10"
+                                Direction="Column"
+                                JustifyContent="SpaceEvenly"
+                                HeightRequest="150">
+                        <VerticalStackLayout>
+                            <Label FontSize="16" FontAttributes="Bold" Text="Yggdrasil" />
+                            <Label FontSize="12" Text="Hiking excursion" />
+                        </VerticalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Label FontSize="20" VerticalOptions="End" HeightRequest="30" Text="★★★★☆" />
+                            <Label FontSize="12" VerticalOptions="Center" Padding="10,0,0,0" Text="4 (1 rating)" />
+                        </HorizontalStackLayout>
+
+                        <Grid ColumnDefinitions="1*, 1*">
+                            <VerticalStackLayout Grid.Column="0">
+                                <Label FontSize="12">Duration</Label>
+                                <Label FontSize="12" FontAttributes="Bold">9 days</Label>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Column="1">
+                                <Label FontSize="12">Price</Label>
+                                <Label FontSize="12" FontAttributes="Bold">1 eye</Label>
+                            </VerticalStackLayout>
+                        </Grid>
+                        
+                    </FlexLayout>
+                </Grid>
+            </Border>
+
+            <Border Margin="10"
+                   StrokeThickness="10"
+                   HorizontalOptions="Fill">
+                <!-- setting the Stroke color using the Element property notation -->
+                <Border.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="Orange" Offset="0.1" />
+                        <GradientStop Color="Brown" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+                <!-- setting the StrokeShape using the Element property notation -->
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="5,5,0,0"></RoundRectangle>
+                </Border.StrokeShape>
+
+                <!-- card content is built up with various layouts and controls -->
+                <Grid HorizontalOptions="Fill" Background="#fff">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0"
+                           Background="#2B0B98" Padding="15" TextColor="#fff"
+                           Text="Pirate Certification Card" />
+                    <VerticalStackLayout Grid.Row="1" Margin="10">
+                        <HorizontalStackLayout>
+                            <CheckBox />
+                            <Label VerticalOptions="Center" Text="Navigating 🧭" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <CheckBox />
+                            <Label VerticalOptions="Center" Text="Swashbuckling ⚔" />
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <CheckBox />
+                            <Label VerticalOptions="Center" Text="Rationing 🍗" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

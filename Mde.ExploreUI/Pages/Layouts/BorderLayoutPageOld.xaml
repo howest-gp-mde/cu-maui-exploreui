@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mde.ExploreUI.Pages.Layouts.BorderLayoutPageOld"
+             Title="Borders!">
+
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center" Padding="20">
+
+            <Border Stroke="#C49B33"
+                    StrokeThickness="4"
+                    StrokeShape="RoundRectangle 20,0,0,20"
+                    Background="#2B0B98"
+                    HorizontalOptions="Center">
+                <Grid Padding="20">
+                    <Label Text="Borders!"
+                       TextColor="White"
+                       FontSize="18"
+                       FontAttributes="Bold" />
+                </Grid>
+            </Border>
+
+            <Label Margin="0,10" 
+                   Text="Borders are used to wrap a Layout with a thickness and color. They also feature shadow, shapes such as rounded corners and other options."/>
+
+            <Label Margin="0,10" 
+                   Text="Always set a Layout (Grid, VerticalStackLayout, HorizontalStackLayout, ...) as the first child element"/>
+            
+            <Label Margin="0,10" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Stroke Shapes" ></Label>
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="A round rectangle can create custom rounded corners" ></Label>
+
+            <Border Margin="10"
+                   Stroke="Black"
+                   StrokeShape="RoundRectangle 50,100,100,100"
+                   HorizontalOptions="Center">
+                <Grid>
+                    <Image Source="island.jpg"
+                         Aspect="AspectFill"
+                         HeightRequest="200"
+                         WidthRequest="200" />
+                </Grid>
+            </Border>
+
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Setting the StrokeShape using an Element Property could improve code readability" ></Label>
+
+            <Border Margin="10"
+                   Stroke="Black"
+                   HorizontalOptions="Center">
+                <Border.StrokeShape>
+                    <Polyline Points="40,10 200,200 10,175" />
+                </Border.StrokeShape>
+                <Grid>
+                    <Image Source="night.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="200"
+                           WidthRequest="200" />
+                </Grid>
+            </Border>
+
+            <Label Margin="0,10" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Shadows" ></Label>
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Create shadows using quickly using the Inline Property" ></Label>
+
+            <Border Margin="10"
+                   Stroke="Black"
+                   StrokeShape="RoundRectangle 50,100,100,100"
+                   HorizontalOptions="Center">
+                <Grid>
+                    <Image Source="island.jpg"
+                         Aspect="AspectFill"
+                         HeightRequest="200"
+                         WidthRequest="200" />
+                </Grid>
+            </Border>
+
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Clipping and " ></Label>
+
+            <Image Source="night.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="200"
+                           WidthRequest="200">
+                <Image.Clip>
+                    <PathGeometry>
+                        <PathFigure StartPoint="40,10">
+                            <PolyLineSegment Points="200,200 10,175" />
+                        </PathFigure>
+                    </PathGeometry>
+                </Image.Clip>
+            </Image>
+
+
+            <Label>MAUI supports playing a GIF using IsAnimationPlaying.</Label>
+            <Label>However, under Hot Reload and Android, you might have to swap the value between False and True</Label>
+            <Border Margin="10"
+                    Stroke="Black"
+                         HeightRequest="200"
+                         WidthRequest="200"
+                    StrokeShape="RoundRectangle 100,100,100,100"
+                    HorizontalOptions="Center">
+                <Border.Shadow>
+                    <Shadow Brush="#000000" Opacity="0.5" Radius="10" Offset="10,20" ></Shadow>
+                </Border.Shadow>
+                <Grid>
+                    <Image Source="sauron.gif"
+                         IsAnimationPlaying="True"
+                         HeightRequest="200"
+                         WidthRequest="200"
+                         VerticalOptions="Start" HorizontalOptions="Center"
+                         Aspect="AspectFill" />
+                </Grid>
+            </Border>
+
+            <Label Text="Border simulating a card" FontSize="Large" Margin="0, 20, 0, 0" HorizontalOptions="Center" />
+
+            <Border>
+                <VerticalStackLayout>
+                    <Label Text="Card Example" FontSize="Medium" FontAttributes="Bold" />
+                </VerticalStackLayout>
+            </Border>
+            
+            <Frame BorderColor="LightGray" CornerRadius="5" Padding="10" Margin="5,0,5,0">
+                <StackLayout>
+                    <Label Text="Card Example" FontSize="Medium" FontAttributes="Bold" />
+                    <BoxView Color="LightGray" HeightRequest="2" HorizontalOptions="Fill" />
+                    <Label Text="Frames can wrap other layouts suchs as StackLayouts to create complex UI's, such as this card!"/>
+                    <Button Text="This button does nothing" HorizontalOptions="Start"/>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

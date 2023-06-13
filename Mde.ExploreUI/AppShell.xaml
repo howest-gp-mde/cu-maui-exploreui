@@ -3,25 +3,28 @@
     x:Class="Mde.ExploreUI.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Mde.ExploreUI.Pages.Layouts"
+    xmlns:layouts="clr-namespace:Mde.ExploreUI.Pages.Layouts"
+    xmlns:displaycontent="clr-namespace:Mde.ExploreUI.Pages.DisplayContent"
     Shell.FlyoutBehavior="Flyout">
 
     <FlyoutItem Route="layouts" Title="Layout">
         <Tab Route="absolute" Title="Absolute Layout">
-            <ShellContent ContentTemplate="{DataTemplate local:AbsoluteLayoutPage}" />
+            <ShellContent ContentTemplate="{DataTemplate layouts:AbsoluteLayoutPage}" />
         </Tab>
         <Tab Route="flex" Title="Flex Layout">
-            <ShellContent ContentTemplate="{DataTemplate local:FlexLayoutPage}" />
+            <ShellContent ContentTemplate="{DataTemplate layouts:FlexLayoutPage}" />
         </Tab>
         <Tab Route="stack" Title="Stack Layout">
-            <ShellContent ContentTemplate="{DataTemplate local:StackLayoutPage}" />
+            <ShellContent ContentTemplate="{DataTemplate layouts:StackLayoutPage}" />
         </Tab>
         <Tab Route="grid" Title="Grid Layout">
-            <ShellContent ContentTemplate="{DataTemplate local:GridLayoutPage}" />
-        </Tab>
-        <Tab Route="frame" Title="Frame Layout">
-            <ShellContent ContentTemplate="{DataTemplate local:FrameLayoutPage}" />
+            <ShellContent ContentTemplate="{DataTemplate layouts:GridLayoutPage}" />
         </Tab>
     </FlyoutItem>
-    
+    <FlyoutItem Route="displaycontent" Title="Display Content">
+        <Tab Route="border" Title="Border">
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderLayoutPage}" />
+        </Tab>
+    </FlyoutItem>
+
 </Shell>

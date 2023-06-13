@@ -53,10 +53,24 @@
 	  <None Remove="Resources\Images\island.jpg" />
 	  <None Remove="Resources\Images\night.jpg" />
 	  <None Remove="Resources\Images\sauron.gif" />
+	  <None Remove="Resources\Images\theshard.png" />
+	  <None Remove="Resources\Images\yggdrasil.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Layouts\BorderLayoutPageOld.xaml.cs">
+	    <DependentUpon>BorderLayoutPageOld.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\DisplayContent\BorderLayoutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 
