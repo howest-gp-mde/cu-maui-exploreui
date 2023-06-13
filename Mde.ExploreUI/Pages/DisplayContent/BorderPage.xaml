@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Mde.ExploreUI.Pages.DisplayContent.BorderLayoutPage"
+             x:Class="Mde.ExploreUI.Pages.DisplayContent.BorderPage"
              Title="Borders!">
 
     <ScrollView>
@@ -77,7 +77,7 @@
                 </Border.Shadow>
                 <!-- good practice: wrap a Layout inside a border -->
                 <Grid>
-                    <Image Source="theshard"
+                    <Image Source="theshard.png"
                            Aspect="AspectFill"
                            HeightRequest="200"
                            WidthRequest="200" />
@@ -91,6 +91,7 @@
 
             <!-- notice the inline StrokeShape property. Each border radius is to 20px -->
             <Border Margin="10"
+                   MaximumWidthRequest="{OnPlatform WinUI=600}"
                    Stroke="#2B0B98"
                    StrokeThickness="5"
                    StrokeShape="RoundRectangle 20"
@@ -102,32 +103,32 @@
                 <!-- card content is built up with various layouts and controls -->
                 <Grid ColumnDefinitions="1*, 2*" HorizontalOptions="Fill" Background="White">
                     <Image Grid.Column="0"
-                         Margin="0"
-                         Source="yggdrasil" 
-                         Aspect="AspectFill" />
+                           Margin="0"
+                           Source="yggdrasil.png" 
+                           Aspect="AspectFill" />
                     <FlexLayout Grid.Column="1"
                                 Margin="10"
                                 Direction="Column"
                                 JustifyContent="SpaceEvenly"
                                 HeightRequest="150">
                         <VerticalStackLayout>
-                            <Label FontSize="16" FontAttributes="Bold" Text="Yggdrasil" />
-                            <Label FontSize="12" Text="Hiking excursion" />
+                            <Label FontSize="16" TextColor="Black" FontAttributes="Bold" Text="Yggdrasil" />
+                            <Label FontSize="12" TextColor="Black" Text="Hiking excursion" />
                         </VerticalStackLayout>
 
                         <HorizontalStackLayout>
-                            <Label FontSize="20" VerticalOptions="End" HeightRequest="30" Text="★★★★☆" />
-                            <Label FontSize="12" VerticalOptions="Center" Padding="10,0,0,0" Text="4 (1 rating)" />
+                            <Label FontSize="20" TextColor="Black" VerticalOptions="End" HeightRequest="30" Text="★★★★☆" />
+                            <Label FontSize="12" TextColor="Black" VerticalOptions="Center" Padding="10,0,0,0" Text="4 (1 rating)" />
                         </HorizontalStackLayout>
 
                         <Grid ColumnDefinitions="1*, 1*">
                             <VerticalStackLayout Grid.Column="0">
-                                <Label FontSize="12">Duration</Label>
-                                <Label FontSize="12" FontAttributes="Bold">9 days</Label>
+                                <Label FontSize="12" TextColor="Black" Text="Duration" />
+                                <Label FontSize="12" TextColor="Black" FontAttributes="Bold" Text="9 days" />
                             </VerticalStackLayout>
                             <VerticalStackLayout Grid.Column="1">
-                                <Label FontSize="12">Price</Label>
-                                <Label FontSize="12" FontAttributes="Bold">1 eye</Label>
+                                <Label FontSize="12" TextColor="Black" Text="Price" />
+                                <Label FontSize="12" TextColor="Black" FontAttributes="Bold" Text="1 eye" />
                             </VerticalStackLayout>
                         </Grid>
                         
@@ -136,6 +137,7 @@
             </Border>
 
             <Border Margin="10"
+                   MaximumWidthRequest="{OnPlatform WinUI=400}"
                    StrokeThickness="10"
                    HorizontalOptions="Fill">
                 <!-- setting the Stroke color using the Element property notation -->
@@ -160,18 +162,19 @@
                     <Label Grid.Row="0"
                            Background="#2B0B98" Padding="15" TextColor="#fff"
                            Text="Pirate Certification Card" />
+                    
                     <VerticalStackLayout Grid.Row="1" Margin="10">
                         <HorizontalStackLayout>
                             <CheckBox />
-                            <Label VerticalOptions="Center" Text="Navigating 🧭" />
+                            <Label TextColor="Black" VerticalOptions="Center" Text="Navigating 🧭" />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout>
                             <CheckBox />
-                            <Label VerticalOptions="Center" Text="Swashbuckling ⚔" />
+                            <Label TextColor="Black" VerticalOptions="Center" Text="Swashbuckling ⚔" />
                         </HorizontalStackLayout>
                         <HorizontalStackLayout>
                             <CheckBox />
-                            <Label VerticalOptions="Center" Text="Rationing 🍗" />
+                            <Label TextColor="Black" VerticalOptions="Center" Text="Rationing 🍗" />
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Grid>

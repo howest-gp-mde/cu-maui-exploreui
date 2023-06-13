@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Explore MAUI Controls"
+             x:Class="Mde.ExploreUI.Pages.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+            VerticalOptions="Start"
+            Spacing="25"
+            Padding="30,10">
+
+            <Label FontSize="20" Text="Welcome to Explore UI!" />
+            <Label FontSize="16" Text="This apps showcases some essential MAUI controls. Use it to explore and learn how they work." />
+            <Label FontSize="16" Text="The examples are extensive enough for you to use as a reference for your own design." />
+            <Label FontSize="16" Text="Click the hamburger menu top left to view examples of:" />
+            <VerticalStackLayout Margin="5,-10,0,0">
+                <Label FontSize="16" Text="• Layouts" />
+                <Label FontSize="16" Text="• Textual views" />
+                <Label FontSize="16" Text="• Displaying content" />
+            </VerticalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

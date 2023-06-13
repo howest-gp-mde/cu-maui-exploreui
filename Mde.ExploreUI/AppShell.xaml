@@ -3,9 +3,15 @@
     x:Class="Mde.ExploreUI.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Mde.ExploreUI.Pages"
     xmlns:layouts="clr-namespace:Mde.ExploreUI.Pages.Layouts"
     xmlns:displaycontent="clr-namespace:Mde.ExploreUI.Pages.DisplayContent"
     Shell.FlyoutBehavior="Flyout">
+
+
+    <FlyoutItem Route="main" Title="Start page">
+        <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
+    </FlyoutItem>
 
     <FlyoutItem Route="layouts" Title="Layout">
         <Tab Route="absolute" Title="Absolute Layout">
@@ -23,7 +29,7 @@
     </FlyoutItem>
     <FlyoutItem Route="displaycontent" Title="Display Content">
         <Tab Route="border" Title="Border">
-            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderLayoutPage}" />
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
         </Tab>
     </FlyoutItem>
 

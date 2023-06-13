@@ -2,38 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.Layouts.StackLayoutPage"
-             Title="StackLayoutPage">
+             Title="Stack Layouts">
     <ScrollView>
-        <StackLayout Margin="10">
-            <Label Text="Top of the stack" />
+        <VerticalStackLayout Margin="10" Spacing="15">
+            <Label Text="- Top of the vertical stack -" HorizontalTextAlignment="Center" />
             <Button Text="Button in the stack" Style="{StaticResource DefaultButtonStyle}" />
+            <Button Text="Button with Start" HorizontalOptions="Start" Style="{StaticResource DefaultButtonStyle}" />
             <Button Text="Button with Center" HorizontalOptions="Center" Style="{StaticResource DefaultButtonStyle}" />
-            <Button Text="Button with CenterAndExpand" HorizontalOptions="CenterAndExpand" Style="{StaticResource DefaultButtonStyle}" />
             <Button Text="Button with End" HorizontalOptions="End" Style="{StaticResource DefaultButtonStyle}" />
-            <Button Text="Button with EndAndExpand" HorizontalOptions="EndAndExpand" Style="{StaticResource DefaultButtonStyle}" />
             <Button Text="Button with Fill" HorizontalOptions="Fill" Style="{StaticResource DefaultButtonStyle}" />
-            <Button Text="Button with FillAndExpand" HorizontalOptions="FillAndExpand" Style="{StaticResource DefaultButtonStyle}" />
-            <Entry Text="Entry field"></Entry>
-            <StackLayout Orientation="Horizontal">
-                <Slider x:Name="sliderA" Maximum="359" Minimum="0" Value="200" 
-                            HorizontalOptions="FillAndExpand"
-                            MinimumTrackColor="{StaticResource SliderMinimumColor}"
-                            MaximumTrackColor="{OnPlatform Android=Black}"
-                            ValueChanged="SliderA_ValueChanged" />
-                <Entry  x:Name="txtSliderA" Text="20" IsReadOnly="True" WidthRequest="75"
-                            HorizontalOptions="End" HorizontalTextAlignment="End" VerticalOptions="Start"
-                            Completed="TxtSliderA_Completed"/>
-            </StackLayout>
+            <Entry Text="Entry field" />
+            <Grid HorizontalOptions="Fill" ColumnDefinitions="*, Auto">
+                <Slider x:Name="sliderA" Grid.Column="0"
+                        Maximum="359" Minimum="0" Value="200" 
+                        MinimumTrackColor="{StaticResource SliderMinimumColor}"
+                        MaximumTrackColor="{OnPlatform Android=Black}"
+                        ValueChanged="SliderA_ValueChanged" />
+                <Entry  x:Name="txtSliderA" Grid.Column="1" 
+                        Text="20" IsReadOnly="True" WidthRequest="75"
+                        HorizontalTextAlignment="End"
+                        Completed="TxtSliderA_Completed" />
+            </Grid>
             <BoxView Color="DarkBlue"
-                         HorizontalOptions="Center"
-                         WidthRequest="50" HeightRequest="50"
-                         BindingContext="{x:Reference sliderA}" Rotation="{Binding Value}" />
-            <Label Text="Bottom of the stack" />
+                     HorizontalOptions="Center"
+                     WidthRequest="50" HeightRequest="50"
+                     BindingContext="{x:Reference sliderA}" Rotation="{Binding Value}" />
+
             <Label LineBreakMode="WordWrap">
-                This is a longer piece of text, which will wrap to the next line if there isn't enough space. This is the default "WordWrap" mode of a Label.
+This is a longer piece of text, which will wrap to the next line if there isn't enough space. This is the default "WordWrap" mode of a Label.
 Alternatively, you can simply use a linebreak in the text, equivalent of \n in C#.
             </Label>
             <Label>This Stack is quite long. Which is why it's wrapped inside a ScrollView so we can scroll happily :-)</Label>
-        </StackLayout>
+            <Label Text="- Bottom of the horizontal stack -" HorizontalTextAlignment="Center" />
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,8 +1,8 @@
 namespace Mde.ExploreUI.Pages.DisplayContent;
 
-public partial class BorderLayoutPage : ContentPage
+public partial class BorderPage : ContentPage
 {
-	public BorderLayoutPage()
+	public BorderPage()
 	{
 		InitializeComponent();
 	}

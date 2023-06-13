@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mde.ExploreUI.Pages.DisplayContent.TextPage"
+             Title="TextPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label x:Name="lblSmallNamed">Small named font-size</Label>
+            <Label FontSize="Micro">Micro font-size</Label>
+            <Label FontSize="24.5" FontAttributes="Bold,Italic">24.5pt font-size</Label>
+            <Label Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
+            <Label LineBreakMode="NoWrap" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
+            <Label LineBreakMode="CharacterWrap" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
+            <Label LineBreakMode="HeadTruncation" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
+            <Label LineBreakMode="MiddleTruncation" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
+            <Label LineBreakMode="TailTruncation" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span>This is</Span>
+                        <Span FontAttributes="Bold,Italic" TextColor="Red">formatted text</Span>
+                        <Span FontSize="Large" TextColor="Green">
+                            <Span.Text>
+                                New 
+line
+                            </Span.Text>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Entry BackgroundColor="White" TextColor="DarkGray" />
+            <Entry Keyboard="Telephone" Placeholder="enter your phonenumber" />
+            <Entry Keyboard="Numeric" Placeholder="enter a number" />
+            <Entry Keyboard="Email" Placeholder="enter your e-mail" />
+            <Entry Keyboard="Url" Placeholder="enter a url" />
+            <AbsoluteLayout>
+                <Editor x:Name="txtChat" HeightRequest="100" Keyboard="Chat"
+                            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
+                            Completed="TxtChat_Completed" TextChanged="TxtChat_TextChanged" />
+                <Label x:Name="lblNumberChars" Text="0 chars" HorizontalTextAlignment="End" TextColor="Gray"
+                           AbsoluteLayout.LayoutBounds="1,1,1,30" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+            </AbsoluteLayout>
+            <Label Text="Reverse Chat Message:" />
+            <Editor x:Name="txtReverseChat" HeightRequest="100" IsReadOnly="True" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

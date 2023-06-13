@@ -62,13 +62,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Pages\DisplayContent\BorderPage.xaml.cs">
+	    <DependentUpon>BorderPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Pages\Layouts\BorderLayoutPageOld.xaml.cs">
 	    <DependentUpon>BorderLayoutPageOld.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\DisplayContent\BorderLayoutPage.xaml">
+	  <MauiXaml Update="Pages\DisplayContent\BorderPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\DisplayContent\TextPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
