@@ -7,16 +7,16 @@ public partial class StackLayoutPage : ContentPage
 		InitializeComponent();
     }
 
-    private void SliderA_ValueChanged(object sender, ValueChangedEventArgs e)
+    private void degreesSlider_ValueChanged(object sender, ValueChangedEventArgs e)
     {
-        txtSliderA.Text = sliderA.Value.ToString("N0");
+        degreesText.Text = degreesSlider.Value.ToString("N0");
     }
 
-    private void TxtSliderA_Completed(object sender, EventArgs e)
+    private void degreesText_Completed(object sender, EventArgs e)
     {
-        if (int.TryParse(txtSliderA.Text, out int sliderVal))
-            sliderA.Value = sliderVal;
+        if (int.TryParse(degreesText.Text, out int sliderVal))
+            degreesSlider.Value = sliderVal;
         else
-            txtSliderA.Text = sliderA.Value.ToString("N0");
+            degreesText.Text = degreesSlider.Value.ToString("N0");
     }
 }

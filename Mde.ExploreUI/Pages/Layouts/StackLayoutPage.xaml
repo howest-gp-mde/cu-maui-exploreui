@@ -13,20 +13,20 @@
             <Button Text="Button with Fill" HorizontalOptions="Fill" Style="{StaticResource DefaultButtonStyle}" />
             <Entry Text="Entry field" />
             <Grid HorizontalOptions="Fill" ColumnDefinitions="*, Auto">
-                <Slider x:Name="sliderA" Grid.Column="0"
+                <Slider x:Name="degreesSlider" Grid.Column="0"
                         Maximum="359" Minimum="0" Value="200" 
                         MinimumTrackColor="{StaticResource SliderMinimumColor}"
                         MaximumTrackColor="{OnPlatform Android=Black}"
-                        ValueChanged="SliderA_ValueChanged" />
-                <Entry  x:Name="txtSliderA" Grid.Column="1" 
+                        ValueChanged="degreesSlider_ValueChanged" />
+                <Entry  x:Name="degreesText" Grid.Column="1" 
                         Text="20" IsReadOnly="True" WidthRequest="75"
                         HorizontalTextAlignment="End"
-                        Completed="TxtSliderA_Completed" />
+                        Completed="degreesText_Completed" />
             </Grid>
             <BoxView Color="DarkBlue"
                      HorizontalOptions="Center"
                      WidthRequest="50" HeightRequest="50"
-                     BindingContext="{x:Reference sliderA}" Rotation="{Binding Value}" />
+                     BindingContext="{x:Reference degreesSlider}" Rotation="{Binding Value}" />
 
             <Label LineBreakMode="WordWrap">
 This is a longer piece of text, which will wrap to the next line if there isn't enough space. This is the default "WordWrap" mode of a Label.
