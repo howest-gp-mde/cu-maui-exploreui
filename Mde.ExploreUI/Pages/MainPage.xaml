@@ -18,7 +18,6 @@
                 <Label FontSize="16" Text="• Textual views" />
                 <Label FontSize="16" Text="• Displaying content" />
             </VerticalStackLayout>
-            
 
         </VerticalStackLayout>
     </ScrollView>

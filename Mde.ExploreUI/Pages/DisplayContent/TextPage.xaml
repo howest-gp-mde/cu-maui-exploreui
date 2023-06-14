@@ -4,7 +4,7 @@
              x:Class="Mde.ExploreUI.Pages.DisplayContent.TextPage"
              Title="TextPage">
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Padding="12">
             <Label x:Name="lblSmallNamed">Small named font-size</Label>
             <Label FontSize="Micro">Micro font-size</Label>
             <Label FontSize="24.5" FontAttributes="Bold,Italic">24.5pt font-size</Label>
@@ -33,7 +33,16 @@ line
             <Entry Keyboard="Numeric" Placeholder="enter a number" />
             <Entry Keyboard="Email" Placeholder="enter your e-mail" />
             <Entry Keyboard="Url" Placeholder="enter a url" />
-            <AbsoluteLayout>
+            <Grid>
+                <Editor x:Name="txtChat" HeightRequest="100" Keyboard="Chat"
+                        TextChanged="TxtChat_TextChanged" />
+                <Label x:Name="lblNumberChars" 
+                       Text="0 chars" HorizontalTextAlignment="End" TextColor="Gray" />
+            </Grid>
+
+            <Label Text="Reverse Chat Message:" />
+            <Editor x:Name="txtReverseChat" HeightRequest="100" IsReadOnly="True" /> 
+            <!--<AbsoluteLayout>
                 <Editor x:Name="txtChat" HeightRequest="100" Keyboard="Chat"
                             AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
                             Completed="TxtChat_Completed" TextChanged="TxtChat_TextChanged" />
@@ -41,7 +50,7 @@ line
                            AbsoluteLayout.LayoutBounds="1,1,1,30" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
             </AbsoluteLayout>
             <Label Text="Reverse Chat Message:" />
-            <Editor x:Name="txtReverseChat" HeightRequest="100" IsReadOnly="True" />
+            <Editor x:Name="txtReverseChat" HeightRequest="100" IsReadOnly="True" />-->
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
