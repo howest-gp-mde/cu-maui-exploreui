@@ -28,6 +28,9 @@
         </Tab>
     </FlyoutItem>
     <FlyoutItem Route="displaycontent" Title="Display Content">
+        <Tab Route="texts" Title="Texts">
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:TextPage}" />
+        </Tab>
         <Tab Route="border" Title="Border">
             <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
         </Tab>
