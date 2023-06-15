@@ -4,16 +4,21 @@
              x:Class="Mde.ExploreUI.Pages.DisplayContent.TextPage"
              Title="TextPage">
     <ScrollView>
-        <VerticalStackLayout Padding="12">
-            <Label x:Name="lblSmallNamed">Small named font-size</Label>
-            <Label FontSize="Micro">Micro font-size</Label>
+        <VerticalStackLayout Padding="12" Spacing="5">
+            
+            <Label>Default font size</Label>
             <Label FontSize="24.5" FontAttributes="Bold,Italic">24.5pt font-size</Label>
+
+            <Label FontSize="20" Padding="0,15,0,10" Text="Wrapping" />
+            
             <Label Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
             <Label LineBreakMode="NoWrap" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
             <Label LineBreakMode="CharacterWrap" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
             <Label LineBreakMode="HeadTruncation" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
             <Label LineBreakMode="MiddleTruncation" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
             <Label LineBreakMode="TailTruncation" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
+
+            <Label FontSize="20" Padding="0,10" Text="Formatted text" />
             <Label>
                 <Label.FormattedText>
                     <FormattedString>
@@ -28,29 +33,28 @@ line
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+
+
+            <Label FontSize="20" Padding="0,15,0,10" Text="Entries" />
+            
             <Entry BackgroundColor="White" TextColor="DarkGray" />
             <Entry Keyboard="Telephone" Placeholder="enter your phonenumber" />
             <Entry Keyboard="Numeric" Placeholder="enter a number" />
             <Entry Keyboard="Email" Placeholder="enter your e-mail" />
             <Entry Keyboard="Url" Placeholder="enter a url" />
-            <Grid>
+
+
+            <Label FontSize="20" Padding="0,15,0,10" Text="Editors" />
+            
+            <Grid Margin="0,10,0,0">
                 <Editor x:Name="txtChat" HeightRequest="100" Keyboard="Chat"
                         TextChanged="TxtChat_TextChanged" />
                 <Label x:Name="lblNumberChars" 
                        Text="0 chars" HorizontalTextAlignment="End" TextColor="Gray" />
             </Grid>
-
             <Label Text="Reverse Chat Message:" />
-            <Editor x:Name="txtReverseChat" HeightRequest="100" IsReadOnly="True" /> 
-            <!--<AbsoluteLayout>
-                <Editor x:Name="txtChat" HeightRequest="100" Keyboard="Chat"
-                            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
-                            Completed="TxtChat_Completed" TextChanged="TxtChat_TextChanged" />
-                <Label x:Name="lblNumberChars" Text="0 chars" HorizontalTextAlignment="End" TextColor="Gray"
-                           AbsoluteLayout.LayoutBounds="1,1,1,30" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
-            </AbsoluteLayout>
-            <Label Text="Reverse Chat Message:" />
-            <Editor x:Name="txtReverseChat" HeightRequest="100" IsReadOnly="True" />-->
+            <Editor x:Name="txtReverseChat" HeightRequest="100" IsReadOnly="True" />
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
