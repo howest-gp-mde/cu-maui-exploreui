@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.DisplayContent.TextPage"
-             Title="TextPage">
+             Title="Labels, Entries and Editors">
     <ScrollView>
         <VerticalStackLayout Padding="12" Spacing="5">
             
@@ -19,30 +19,48 @@
             <Label LineBreakMode="TailTruncation" Text="This text is long enough to be wrapped to the next line, alteast when you're using a phone in vertical orientation." />
 
             <Label FontSize="20" Padding="0,10" Text="Formatted text" />
-            <Label>
+
+            <Label Margin="0,5">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span>This is</Span>
-                        <Span FontAttributes="Bold,Italic" TextColor="Red">formatted text</Span>
-                        <Span FontSize="Large" TextColor="Green">
-                            <Span.Text>
-                                New 
-line
+                        <Span Text="Use the " />
+                        <Span Text="FormattedText" FontAttributes="Bold, Italic"></Span>
+                        <Span Text=" property and the " />
+                        <Span Text="FormattedString"
+                              FontAttributes="Bold, Italic" TextColor="Green" FontSize="16" />
+                        <Span Text=" object to create " />
+                        <Span Text="Formatted Text." 
+                              FontAttributes="Bold, Italic" TextColor="Red" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+            <Label Margin="0,5">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="When settings the " />
+                        <Span Text="Text" FontAttributes="Bold, Italic" />
+                        <Span Text=" property with the " />
+                        <Span Text="Element Property notation" CharacterSpacing="5" />
+                        <Span Text=", you can " />
+                        <Span>
+                            <Span.Text><!-- this is the element property notation-->
+                                create
+                                new
+                                lines !
                             </Span.Text>
                         </Span>
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
 
-
             <Label FontSize="20" Padding="0,15,0,10" Text="Entries" />
             
-            <Entry BackgroundColor="White" TextColor="DarkGray" />
+            <Entry TextColor="Red" />
             <Entry Keyboard="Telephone" Placeholder="enter your phonenumber" />
             <Entry Keyboard="Numeric" Placeholder="enter a number" />
             <Entry Keyboard="Email" Placeholder="enter your e-mail" />
-            <Entry Keyboard="Url" Placeholder="enter a url" />
-
+            <Entry Keyboard="Url" Placeholder="enter a URL" />
 
             <Label FontSize="20" Padding="0,15,0,10" Text="Editors" />
             

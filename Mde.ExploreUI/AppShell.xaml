@@ -8,7 +8,6 @@
     xmlns:displaycontent="clr-namespace:Mde.ExploreUI.Pages.DisplayContent"
     Shell.FlyoutBehavior="Flyout">
 
-
     <FlyoutItem Route="main" Title="Start page">
         <ShellContent ContentTemplate="{DataTemplate pages:MainPage}" />
     </FlyoutItem>

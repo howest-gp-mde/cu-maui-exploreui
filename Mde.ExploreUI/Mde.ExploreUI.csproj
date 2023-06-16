@@ -15,7 +15,7 @@
 		<ApplicationTitle>Mde.ExploreUI</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mde.exploreui</ApplicationId>
+		<ApplicationId>be.howest.prog.mde.exploreui</ApplicationId>
 		<ApplicationIdGuid>760ceab3-4e0e-4f76-9369-968d22a3e2e1</ApplicationIdGuid>
 
 		<!-- Versions -->
