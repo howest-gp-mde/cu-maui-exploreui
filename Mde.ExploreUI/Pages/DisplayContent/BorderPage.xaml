@@ -24,7 +24,7 @@
                    Text="Borders are used to wrap a Layout with a thickness and color. They also feature shadow, shapes such as rounded corners and other options."/>
 
             <Label Margin="0,10" 
-                   Text="Always set a Layout (Grid, VerticalStackLayout, HorizontalStackLayout, ...) as the first child element"/>
+                   Text="Always set a Layout (Grid, Flex, VerticalStack, HorizontalStack, ...) as the first child element"/>
 
 
             <Label Margin="0,10" FontSize="18" HorizontalTextAlignment="Center"
