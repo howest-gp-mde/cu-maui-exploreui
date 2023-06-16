@@ -54,6 +54,11 @@
 	  <None Remove="Resources\Images\alley.jpg" />
 	  <None Remove="Resources\Images\island.jpg" />
 	  <None Remove="Resources\Images\night.jpg" />
+	  <None Remove="Resources\Images\page_icon_1.svg" />
+	  <None Remove="Resources\Images\page_icon_2.svg" />
+	  <None Remove="Resources\Images\page_icon_3.svg" />
+	  <None Remove="Resources\Images\page_icon_4.svg" />
+	  <None Remove="Resources\Images\page_icon_5.svg" />
 	  <None Remove="Resources\Images\sauron.gif" />
 	  <None Remove="Resources\Images\theshard.png" />
 	  <None Remove="Resources\Images\yggdrasil.png" />

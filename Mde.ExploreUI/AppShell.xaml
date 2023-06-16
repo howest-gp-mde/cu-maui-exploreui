@@ -16,30 +16,30 @@
     </FlyoutItem>
 
     <FlyoutItem Route="layouts" Title="Layout">
-        <Tab Route="flex" Title="Flex">
+        <Tab Route="flex" Title="Flex" Icon="page_icon_1">
             <ShellContent ContentTemplate="{DataTemplate layouts:FlexLayoutPage}" />
         </Tab>
-        <Tab Route="grid" Title="Grid">
+        <Tab Route="grid" Title="Grid" Icon="page_icon_2">
             <ShellContent ContentTemplate="{DataTemplate layouts:GridLayoutPage}" />
         </Tab>
-        <Tab Route="stack" Title="Stacks">
+        <Tab Route="stack" Title="Stacks" Icon="page_icon_3">
             <ShellContent ContentTemplate="{DataTemplate layouts:StackLayoutPage}" />
         </Tab>
-        <Tab Route="absolute" Title="Absolute">
+        <Tab Route="absolute" Title="Absolute" Icon="page_icon_4">
             <ShellContent ContentTemplate="{DataTemplate layouts:AbsoluteLayoutPage}" />
         </Tab>
     </FlyoutItem>
     <FlyoutItem Route="displaycontent" Title="Content">
-        <Tab Route="texts" Title="Texts">
+        <Tab Route="texts" Title="Texts" Icon="page_icon_1">
             <ShellContent ContentTemplate="{DataTemplate displaycontent:TextPage}" />
         </Tab>
-        <Tab Route="border" Title="Border">
+        <Tab Route="border" Title="Border" Icon="page_icon_2">
             <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
         </Tab>
-        <Tab Route="images" Title="Images">
+        <Tab Route="images" Title="Images" Icon="page_icon_3">
             <ShellContent ContentTemplate="{DataTemplate displaycontent:ImagesPage}" />
         </Tab>
-        <Tab Route="customfonts" Title="Custom Fonts">
+        <Tab Route="customfonts" Title="Custom Fonts" Icon="page_icon_4">
             <ShellContent ContentTemplate="{DataTemplate displaycontent:CustomFontsPage}" />
         </Tab>
     </FlyoutItem>
@@ -53,13 +53,13 @@
     </FlyoutItem>
     
     <FlyoutItem Route="forms" Title="Forms">
-        <Tab Route="formessentials" Title="Essentials">
+        <Tab Route="formessentials" Title="Essentials" Icon="page_icon_1">
             <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
         </Tab>
-        <Tab Route="buttons" Title="Button">
+        <Tab Route="buttons" Title="Button" Icon="page_icon_2">
             <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
         </Tab>
-        <Tab Route="pickers" Title="Pickers">
+        <Tab Route="pickers" Title="Pickers" Icon="page_icon_3">
             <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
         </Tab>
     </FlyoutItem>
