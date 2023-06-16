@@ -26,13 +26,41 @@
             <ShellContent ContentTemplate="{DataTemplate layouts:GridLayoutPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Route="displaycontent" Title="Display Content">
+    <FlyoutItem Route="displaycontent" Title="Content">
         <Tab Route="texts" Title="Texts">
             <ShellContent ContentTemplate="{DataTemplate displaycontent:TextPage}" />
         </Tab>
         <Tab Route="border" Title="Border">
             <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
         </Tab>
+        <Tab Route="images" Title="Images">
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+        </Tab>
+        <Tab Route="customfonts" Title="Custom Fonts">
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+        </Tab>
+        <Tab Route="alerts" Title="Alerts">
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+        </Tab>
     </FlyoutItem>
 
+    <FlyoutItem Route="styles" Title="Styles">
+        <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Route="alerts" Title="Alerts">
+        <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Route="forms" Title="Forms">
+        <Tab Route="formessentials" Title="Essentials">
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+        </Tab>
+        <Tab Route="buttons" Title="Button">
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+        </Tab>
+        <Tab Route="pickers" Title="Pickers">
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+        </Tab>
+    </FlyoutItem>
 </Shell>
