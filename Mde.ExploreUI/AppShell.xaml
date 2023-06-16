@@ -6,6 +6,9 @@
     xmlns:pages="clr-namespace:Mde.ExploreUI.Pages"
     xmlns:layouts="clr-namespace:Mde.ExploreUI.Pages.Layouts"
     xmlns:displaycontent="clr-namespace:Mde.ExploreUI.Pages.DisplayContent"
+    xmlns:styles="clr-namespace:Mde.ExploreUI.Pages.Styles"
+    xmlns:alerts="clr-namespace:Mde.ExploreUI.Pages.Alerts"
+    xmlns:forms="clr-namespace:Mde.ExploreUI.Pages.Forms"
     Shell.FlyoutBehavior="Flyout">
 
     <FlyoutItem Route="main" Title="Start page">
@@ -34,30 +37,30 @@
             <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
         </Tab>
         <Tab Route="images" Title="Images">
-            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:ImagesPage}" />
         </Tab>
         <Tab Route="customfonts" Title="Custom Fonts">
-            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+            <ShellContent ContentTemplate="{DataTemplate displaycontent:CustomFontsPage}" />
         </Tab>
     </FlyoutItem>
 
     <FlyoutItem Route="styles" Title="Styles">
-        <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+        <ShellContent ContentTemplate="{DataTemplate styles:StylesPage}" />
     </FlyoutItem>
 
     <FlyoutItem Route="alerts" Title="Alerts">
-        <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+        <ShellContent ContentTemplate="{DataTemplate alerts:AlertsPage}" />
     </FlyoutItem>
     
     <FlyoutItem Route="forms" Title="Forms">
         <Tab Route="formessentials" Title="Essentials">
-            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+            <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
         </Tab>
         <Tab Route="buttons" Title="Button">
-            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+            <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
         </Tab>
         <Tab Route="pickers" Title="Pickers">
-            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
+            <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
         </Tab>
     </FlyoutItem>
 </Shell>
