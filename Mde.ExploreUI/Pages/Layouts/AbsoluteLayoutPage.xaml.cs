@@ -6,23 +6,24 @@ public partial class AbsoluteLayoutPage : ContentPage
 	{
 		InitializeComponent();
 	}
-    //private void BtnLeft_Click(object sender, EventArgs e)
-    //{
-    //    boxPlayer.TranslationX -= 10;
-    //}
 
-    //private void BtnTop_Click(object sender, EventArgs e)
-    //{
-    //    boxPlayer.TranslationY -= 10;
-    //}
+    private void BtnLeft_Click(object sender, EventArgs e)
+    {
+        boxPlayer.TranslationX -= 15;
+    }
 
-    //private void BtnRight_Click(object sender, EventArgs e)
-    //{
-    //    boxPlayer.TranslationX += 10;
-    //}
+    private void BtnTop_Click(object sender, EventArgs e)
+    {
+        boxPlayer.TranslationY -= 15;
+    }
 
-    //private void BtnBottom_Click(object sender, EventArgs e)
-    //{
-    //    boxPlayer.TranslationY += 10;
-    //}
+    private void BtnRight_Click(object sender, EventArgs e)
+    {
+        boxPlayer.TranslationX += 15;
+    }
+
+    private void BtnBottom_Click(object sender, EventArgs e)
+    {
+        boxPlayer.TranslationY += 15;
+    }
 }

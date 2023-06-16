@@ -13,16 +13,16 @@
     </FlyoutItem>
 
     <FlyoutItem Route="layouts" Title="Layout">
-        <Tab Route="flex" Title="Flex Layout">
+        <Tab Route="flex" Title="Flex">
             <ShellContent ContentTemplate="{DataTemplate layouts:FlexLayoutPage}" />
         </Tab>
-        <Tab Route="grid" Title="Grid Layout">
+        <Tab Route="grid" Title="Grid">
             <ShellContent ContentTemplate="{DataTemplate layouts:GridLayoutPage}" />
         </Tab>
-        <Tab Route="stack" Title="Stack Layout">
+        <Tab Route="stack" Title="Stacks">
             <ShellContent ContentTemplate="{DataTemplate layouts:StackLayoutPage}" />
         </Tab>
-        <Tab Route="absolute" Title="Absolute Layout">
+        <Tab Route="absolute" Title="Absolute">
             <ShellContent ContentTemplate="{DataTemplate layouts:AbsoluteLayoutPage}" />
         </Tab>
     </FlyoutItem>

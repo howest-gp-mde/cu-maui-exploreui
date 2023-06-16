@@ -2,6 +2,54 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.Layouts.AbsoluteLayoutPage"
+             BackgroundColor="#ddd"
              Title="Layouts: Absolute">
-    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Label FontSize="36"
+                   FontFamily="Sacramento"
+                   ZIndex="1"
+                   HorizontalTextAlignment="Center"
+                   AbsoluteLayout.LayoutBounds=".5, .25, 1, 0.5" 
+                   AbsoluteLayout.LayoutFlags="All">
+                <Label.Text>
+                    The traveling adventures 
+of the little pink box
+                </Label.Text>
+            </Label>
+
+            <BoxView x:Name="boxPlayer" Color="Pink"
+                     ZIndex="2"
+                     AbsoluteLayout.LayoutBounds=".5, .5, 50, 50"
+                     AbsoluteLayout.LayoutFlags="PositionProportional">
+                <BoxView.Shadow>
+                    <Shadow Offset="10,10" Opacity="0.35" Brush="#333" Radius="4" />
+                </BoxView.Shadow>
+            </BoxView>
+            <Button Text="&#9664;" Clicked="BtnLeft_Click"
+                    AbsoluteLayout.LayoutBounds="0, .5, 50, 100" 
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    ZIndex="5" />
+            <Button Text="&#9650;" Clicked="BtnTop_Click"
+                    AbsoluteLayout.LayoutBounds=".5, 0, 100, 50" 
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    ZIndex="5" />
+            <Button Text="&#9654;" Clicked="BtnRight_Click"
+                    AbsoluteLayout.LayoutBounds="1, .5, 50, 100" 
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    ZIndex="5" />
+            <Button Text="&#9660;" Clicked="BtnBottom_Click"
+                    AbsoluteLayout.LayoutBounds=".5, 1, 100, 50"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    ZIndex="5" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
 </ContentPage>
