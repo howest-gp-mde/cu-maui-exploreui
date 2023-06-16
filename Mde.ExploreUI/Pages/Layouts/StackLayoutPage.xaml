@@ -6,16 +6,15 @@
     <ScrollView>
         <VerticalStackLayout Margin="10" Spacing="15">
             <Label Text="- Top of the vertical stack -" HorizontalTextAlignment="Center" />
-            <Button Text="Button in the stack" Style="{StaticResource DefaultButtonStyle}" />
-            <Button Text="Button with Start" HorizontalOptions="Start" Style="{StaticResource DefaultButtonStyle}" />
-            <Button Text="Button with Center" HorizontalOptions="Center" Style="{StaticResource DefaultButtonStyle}" />
-            <Button Text="Button with End" HorizontalOptions="End" Style="{StaticResource DefaultButtonStyle}" />
-            <Button Text="Button with Fill" HorizontalOptions="Fill" Style="{StaticResource DefaultButtonStyle}" />
+            <Button Text="Button in the stack" />
+            <Button Text="Button with Start" HorizontalOptions="Start" />
+            <Button Text="Button with Center" HorizontalOptions="Center" />
+            <Button Text="Button with End" HorizontalOptions="End" />
+            <Button Text="Button with Fill" HorizontalOptions="Fill" />
             <Entry Text="Entry field" />
             <Grid HorizontalOptions="Fill" ColumnDefinitions="*, Auto">
                 <Slider x:Name="degreesSlider" Grid.Column="0"
                         Maximum="359" Minimum="0" Value="200" 
-                        MinimumTrackColor="{StaticResource SliderMinimumColor}"
                         MaximumTrackColor="{OnPlatform Android=Black}"
                         ValueChanged="degreesSlider_ValueChanged" />
                 <Entry  x:Name="degreesText" Grid.Column="1" 
