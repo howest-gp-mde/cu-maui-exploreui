@@ -13,17 +13,17 @@
     </FlyoutItem>
 
     <FlyoutItem Route="layouts" Title="Layout">
-        <Tab Route="absolute" Title="Absolute Layout">
-            <ShellContent ContentTemplate="{DataTemplate layouts:AbsoluteLayoutPage}" />
-        </Tab>
         <Tab Route="flex" Title="Flex Layout">
             <ShellContent ContentTemplate="{DataTemplate layouts:FlexLayoutPage}" />
+        </Tab>
+        <Tab Route="grid" Title="Grid Layout">
+            <ShellContent ContentTemplate="{DataTemplate layouts:GridLayoutPage}" />
         </Tab>
         <Tab Route="stack" Title="Stack Layout">
             <ShellContent ContentTemplate="{DataTemplate layouts:StackLayoutPage}" />
         </Tab>
-        <Tab Route="grid" Title="Grid Layout">
-            <ShellContent ContentTemplate="{DataTemplate layouts:GridLayoutPage}" />
+        <Tab Route="absolute" Title="Absolute Layout">
+            <ShellContent ContentTemplate="{DataTemplate layouts:AbsoluteLayoutPage}" />
         </Tab>
     </FlyoutItem>
     <FlyoutItem Route="displaycontent" Title="Content">
@@ -37,9 +37,6 @@
             <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
         </Tab>
         <Tab Route="customfonts" Title="Custom Fonts">
-            <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
-        </Tab>
-        <Tab Route="alerts" Title="Alerts">
             <ShellContent ContentTemplate="{DataTemplate displaycontent:BorderPage}" />
         </Tab>
     </FlyoutItem>

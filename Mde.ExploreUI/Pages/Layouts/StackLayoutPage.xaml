@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.Layouts.StackLayoutPage"
-             Title="Stack Layouts">
+             Title="Layouts: Stack">
     <ScrollView>
         <VerticalStackLayout Margin="10" Spacing="15">
             <Label Text="- Top of the vertical stack -" HorizontalTextAlignment="Center" />
@@ -33,7 +33,7 @@ This is a longer piece of text, which will wrap to the next line if there isn't 
 Alternatively, you can simply use a linebreak in the text, equivalent of \n in C#.
             </Label>
             <Label>This Stack is quite long. Which is why it's wrapped inside a ScrollView so we can scroll happily :-)</Label>
-            <Label Text="- Bottom of the horizontal stack -" HorizontalTextAlignment="Center" />
+            <Label Text="- Bottom of the vertical stack -" HorizontalTextAlignment="Center" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

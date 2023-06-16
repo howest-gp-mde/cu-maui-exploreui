@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.DisplayContent.BorderPage"
-             Title="Borders!">
+             Title="Content: Borders">
 
     <ScrollView>
         <VerticalStackLayout HorizontalOptions="Center" Padding="20">
@@ -31,7 +31,7 @@
                    Text="Shapes and Shadows" ></Label>
 
             <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                   Text="As with most elements, a Border has a Shadow property. It can also be clipped to a shape using the StrokeShape property." ></Label>
+                   Text="Like most elements, a Border has a Shadow property. It can also be clipped to a shape using the StrokeShape property." ></Label>
 
             <Border Margin="0"
                    Stroke="#2B0B98"
