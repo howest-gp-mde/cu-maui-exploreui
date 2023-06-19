@@ -11,7 +11,6 @@ public partial class AlertsPage : ContentPage
 		InitializeComponent();
 	}
 
-
     private async void btnAlert_Clicked(object sender, EventArgs e)
     {
         string title = "Pop-up!";

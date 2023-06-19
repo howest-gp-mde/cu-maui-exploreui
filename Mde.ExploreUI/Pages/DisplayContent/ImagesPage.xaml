@@ -2,11 +2,81 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.DisplayContent.ImagesPage"
-             Title="Content: Images and Icons">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Content: Images">
+    <ScrollView>
+        <VerticalStackLayout Padding="12" Spacing="5">
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Images and icons can drastically change the entire look and feel of your app." />
+
+            <!-- 
+                Local Images
+            -->
+            <Label Margin="0,15,0,10" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Local Images" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Images that should always be present in an application are often shipped with the app as a resource." />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="When explicitly setting the Height or WidthRequest from an image, the Aspect property helps how the image will fill the avaiable space" />
+
+            <Label Margin="0,10,0,0" FontSize="12" HorizontalTextAlignment="Center" FontAttributes="Bold"
+                   Text="AspectFit (default)" />
+            <Label Margin="-5" FontSize="11" HorizontalTextAlignment="Center"
+                   Text="Ensures the full image is visible when constraining Height or Width. Prevents image warping by letterboxing the margins" />
+
+            <Border Margin="-12,0" StrokeThickness="5" Stroke="Red" Padding="0">
+                <Grid Margin="0" BackgroundColor="White">
+                    <Image Source="clouds" HeightRequest="100" Aspect="AspectFit" />
+                </Grid>
+            </Border>
+
+            <Label Margin="0,10,0,0" FontSize="12" HorizontalTextAlignment="Center" FontAttributes="Bold"
+                   Text="AspectFill" />
+            <Label Margin="-5" FontSize="11" HorizontalTextAlignment="Center"
+                   Text="Ensures the image fills the entire constrained space. Prevents image warping by clipping the image." />
+
+            <Border Margin="-12,0" StrokeThickness="5" Stroke="Red" Padding="0">
+                <Grid Margin="0" BackgroundColor="White">
+                    <Image Source="clouds" HeightRequest="100" Aspect="AspectFill" />
+                </Grid>
+            </Border>
+
+            <Label Margin="0" FontSize="12" HorizontalTextAlignment="Center" FontAttributes="Bold"
+                   Text="Fill" />
+            <Label Margin="-5" FontSize="11" HorizontalTextAlignment="Center"
+                   Text="Ensures the image fills the entire constrained space by warping it." />
+
+            <Border Margin="-12,0" StrokeThickness="5" Stroke="Red" Padding="0">
+                <Grid Margin="0" BackgroundColor="White">
+                    <Image Source="clouds" HeightRequest="100" Aspect="Fill" />
+                </Grid>
+            </Border>
+            
+            <Label Margin="0" FontSize="12" HorizontalTextAlignment="Center" FontAttributes="Bold"
+                   Text="Center" />
+            <Label Margin="-5" FontSize="11" HorizontalTextAlignment="Center"
+                   Text="Displays the image full-size and centeredin the constrained space. Prevents image warping by clipping the image" />
+
+            <Border Margin="-12,0" StrokeThickness="5" Stroke="Red" Padding="0">
+                <Grid Margin="0" BackgroundColor="White">
+                    <Image Source="clouds" HeightRequest="100" Aspect="Center" />
+                </Grid>
+            </Border>
+
+            <!-- 
+                Remote Images
+            -->
+            <Label Margin="0,15,0,10" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Remote Images" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Images may need to be downloaded from an external source on the web. For example, the profile picture from your online account will not be shipped with the app's resources." />
+            
+            <Image Source="clouds" HeightRequest="100" Aspect="Fill" />
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
