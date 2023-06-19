@@ -12,14 +12,60 @@
             <!-- 
                 Local Images
             -->
-            <Label Margin="0,15,0,10" FontSize="18" HorizontalTextAlignment="Center"
+            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
                    Text="Local Images" />
 
             <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
                    Text="Images that should always be present in an application are often shipped with the app as a resource." />
 
+            <Image Source="clouds" />
+
+            <!-- 
+                Remote Images
+            -->
+            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Remote Images" />
+
             <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                   Text="When explicitly setting the Height or WidthRequest from an image, the Aspect property helps how the image will fill the avaiable space" />
+                   Text="Images may need to be downloaded from an external source on the web. For example, the profile picture from your online account will not be shipped with the app's resources." />
+
+            <Image Source="https://picsum.photos/400/200?1"/>
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center">
+                <Label.Text>By default, images are cached for 1 day.
+When explicitly defining the UriImageSource, you can how long the image will be cached.
+                </Label.Text>
+            </Label>
+
+            <Image>
+                <Image.Source>
+                    <UriImageSource
+                        Uri="https://picsum.photos/400/200?2"
+                        CachingEnabled="True" CacheValidity="00:00:00:30" /> <!-- cached for 30 seconds (days:hours:minutes:seconds)-->
+                </Image.Source>
+            </Image>
+
+            <!-- 
+                Image from Stream
+            -->
+            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Image from Stream" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="With a Stream, you can provide the raw bytes which make up the image. This enables loading images from any source: online, a local file, or directly from memory." />
+            
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="The image below was randomly generated and provided as a stream" />
+            <Image Source="clouds" />
+
+            <!-- 
+               Scaling Images
+            -->
+            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Image Scaling" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="The below image has it's Height constrained to 100px. When explicitly setting the Height or WidthRequest for an image, the Aspect property helps how the image will fill the available space" />
 
             <Label Margin="0,10,0,0" FontSize="12" HorizontalTextAlignment="Center" FontAttributes="Bold"
                    Text="AspectFit (default)" />
@@ -53,7 +99,7 @@
                     <Image Source="clouds" HeightRequest="100" Aspect="Fill" />
                 </Grid>
             </Border>
-            
+
             <Label Margin="0" FontSize="12" HorizontalTextAlignment="Center" FontAttributes="Bold"
                    Text="Center" />
             <Label Margin="-5" FontSize="11" HorizontalTextAlignment="Center"
@@ -64,18 +110,6 @@
                     <Image Source="clouds" HeightRequest="100" Aspect="Center" />
                 </Grid>
             </Border>
-
-            <!-- 
-                Remote Images
-            -->
-            <Label Margin="0,15,0,10" FontSize="18" HorizontalTextAlignment="Center"
-                   Text="Remote Images" />
-
-            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                   Text="Images may need to be downloaded from an external source on the web. For example, the profile picture from your online account will not be shipped with the app's resources." />
-            
-            <Image Source="clouds" HeightRequest="100" Aspect="Fill" />
-            
             
         </VerticalStackLayout>
     </ScrollView>
