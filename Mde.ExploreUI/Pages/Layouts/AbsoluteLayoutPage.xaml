@@ -34,19 +34,19 @@ of the little pink box
                     <Shadow Offset="10,10" Opacity="0.35" Brush="#333" Radius="4" />
                 </BoxView.Shadow>
             </BoxView>
-            <Button Text="&#9664;" Clicked="BtnLeft_Click"
+            <Button Text="&#9664;" Clicked="BtnLeft_Click" Margin="3"
                     AbsoluteLayout.LayoutBounds="0, .5, 50, 100" 
                     AbsoluteLayout.LayoutFlags="PositionProportional"
                     ZIndex="5" />
-            <Button Text="&#9650;" Clicked="BtnTop_Click"
+            <Button Text="&#9650;" Clicked="BtnTop_Click" Margin="3"
                     AbsoluteLayout.LayoutBounds=".5, 0, 100, 50" 
                     AbsoluteLayout.LayoutFlags="PositionProportional"
                     ZIndex="5" />
-            <Button Text="&#9654;" Clicked="BtnRight_Click"
+            <Button Text="&#9654;" Clicked="BtnRight_Click" Margin="3"
                     AbsoluteLayout.LayoutBounds="1, .5, 50, 100" 
                     AbsoluteLayout.LayoutFlags="PositionProportional"
                     ZIndex="5" />
-            <Button Text="&#9660;" Clicked="BtnBottom_Click"
+            <Button Text="&#9660;" Clicked="BtnBottom_Click" Margin="3"
                     AbsoluteLayout.LayoutBounds=".5, 1, 100, 50"
                     AbsoluteLayout.LayoutFlags="PositionProportional"
                     ZIndex="5" />

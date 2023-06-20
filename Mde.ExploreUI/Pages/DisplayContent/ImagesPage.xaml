@@ -74,7 +74,7 @@ When explicitly defining the UriImageSource, you can configfure how long the ima
             
             <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
                    Text="The image below was randomly generated and provided as a stream" />
-            <Image Source="clouds" />
+            <Image Source="clouds.jpg" />
 
             <!-- 
                Scaling Images
@@ -92,7 +92,7 @@ When explicitly defining the UriImageSource, you can configfure how long the ima
 
             <Border Margin="-12,0" StrokeThickness="5" Stroke="Red" Padding="0">
                 <Grid Margin="0" BackgroundColor="White">
-                    <Image Source="clouds" HeightRequest="100" Aspect="AspectFit" />
+                    <Image Source="clouds.jpg" HeightRequest="100" Aspect="AspectFit" />
                 </Grid>
             </Border>
 
@@ -103,7 +103,7 @@ When explicitly defining the UriImageSource, you can configfure how long the ima
 
             <Border Margin="-12,0" StrokeThickness="5" Stroke="Red" Padding="0">
                 <Grid Margin="0" BackgroundColor="White">
-                    <Image Source="clouds" HeightRequest="100" Aspect="AspectFill" />
+                    <Image Source="clouds.jpg" HeightRequest="100" Aspect="AspectFill" />
                 </Grid>
             </Border>
 
@@ -114,7 +114,7 @@ When explicitly defining the UriImageSource, you can configfure how long the ima
 
             <Border Margin="-12,0" StrokeThickness="5" Stroke="Red" Padding="0">
                 <Grid Margin="0" BackgroundColor="White">
-                    <Image Source="clouds" HeightRequest="100" Aspect="Fill" />
+                    <Image Source="clouds.jpg" HeightRequest="100" Aspect="Fill" />
                 </Grid>
             </Border>
 
@@ -125,7 +125,7 @@ When explicitly defining the UriImageSource, you can configfure how long the ima
 
             <Border Margin="-12,0" StrokeThickness="5" Stroke="Red" Padding="0">
                 <Grid Margin="0" BackgroundColor="White">
-                    <Image Source="clouds" HeightRequest="100" Aspect="Center" />
+                    <Image Source="clouds.jpg" HeightRequest="100" Aspect="Center" />
                 </Grid>
             </Border>
             

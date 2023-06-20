@@ -3,10 +3,71 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.DisplayContent.CustomFontsPage"
              Title="Content: Custom Fonts">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="12" Spacing="5">
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Fonts are an essential part of styling your app and adjusting to your audience." />
+
+            <!-- 
+                Custom Fonts
+            -->
+            <Label Margin="0,15,0,0" 
+                   FontSize="40" 
+                   FontFamily="Sacramento"
+                   HorizontalTextAlignment="Center"
+                   Text="Custom Fonts" />
+
+            <Label Margin="0,10,0,5"
+                   FontSize="12" 
+                   FontFamily="OpenSansSemibold"
+                   Text="1. Drop your fonts in the Fonts folder" />
+
+            <Label Margin="0,10,0,5"
+                   FontSize="12" 
+                   FontFamily="OpenSansSemibold">
+                2. Set the Build Action of the Font file to "MauiFont"</Label>
+
+            <Label Margin="0,10,0,5"
+                   FontSize="12" 
+                   FontFamily="OpenSansSemibold">3. Register the font with an alias in MauiProgram.cs</Label>
+
+            <Label Margin="0,10,0,5" HorizontalTextAlignment="Center"
+                   FontSize="30" TextColor="Orange"
+                   FontFamily="Looney">
+                <Label.Text>That's all folks!</Label.Text>
+                <Label.Shadow>
+                    <Shadow Radius="2" Brush="Gray" Offset="5,5"></Shadow>
+                </Label.Shadow>
+            </Label>
+
+            <!-- 
+                Icon Fonts
+            -->
+            
+            <Label Margin="0,15,0,0" 
+                   FontSize="40" 
+                   FontFamily="Sacramento"
+                   HorizontalTextAlignment="Center"
+                   Text="Icon Fonts" />
+            
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Icon fonts are not just popular on the web. Because they are scalable and colorable, you can easily use them inside any UI." />
+
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="{FontImage &#xf13d;, Color=#999, FontFamily=FASolid, Size=44}" />
+
+                <Border StrokeShape="RoundRectangle 10" Stroke="Green">
+                    <Border.Shadow>
+                        <Shadow Radius="2" Brush="Gray" Offset="5,5"></Shadow>
+                    </Border.Shadow>
+                    <ImageButton Padding="10" Source="{FontImage &#xf58f;, Color=Green, FontFamily=FASolid, Size=44}" />
+                </Border>
+                
+            </HorizontalStackLayout>
+            
+
+            
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
