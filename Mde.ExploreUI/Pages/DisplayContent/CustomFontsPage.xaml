@@ -54,19 +54,20 @@
             <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
                    Text="Icon fonts are not just popular on the web. Because they are scalable and colorable, you can easily use them inside any UI." />
 
-            <HorizontalStackLayout Spacing="10">
-                <Image Source="{FontImage &#xf13d;, Color=#999, FontFamily=FASolid, Size=44}" />
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
 
+                <Image Source="{FontImage &#xf001;, Color=#999, FontFamily=FASolid, Size=44}" />
+                
                 <Border StrokeShape="RoundRectangle 10" Stroke="Green">
                     <Border.Shadow>
                         <Shadow Radius="2" Brush="Gray" Offset="5,5"></Shadow>
                     </Border.Shadow>
-                    <ImageButton Padding="10" Source="{FontImage &#xf58f;, Color=Green, FontFamily=FASolid, Size=44}" />
+                    <ImageButton Padding="5" Source="{FontImage &#xf58f;, Color=Green, FontFamily=FASolid, Size=30}" />
                 </Border>
                 
-            </HorizontalStackLayout>
-            
+                <Image Source="{FontImage &#xe900;, Color=#999, FontFamily=Icomoon, Size=44}" />
 
+            </HorizontalStackLayout>
             
         </VerticalStackLayout>
     </ScrollView>

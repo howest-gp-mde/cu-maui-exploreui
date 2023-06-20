@@ -17,9 +17,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("Sacramento-Regular.ttf", "Sacramento");
                 fonts.AddFont("LooneyTunes.ttf", "Looney");
-                fonts.AddFont("Font Awesome 6 Brands-Regular-400.otf", "FABrands");
-                fonts.AddFont("Font Awesome 6 Free-Regular-400.otf", "FARegular");
                 fonts.AddFont("Font Awesome 6 Free-Solid-900.otf", "FASolid");
+                fonts.AddFont("icomoon.ttf", "Icomoon");
             });
 
 #if DEBUG

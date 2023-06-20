@@ -3,10 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.Styles.StylesPage"
              Title="Styles">
+    <ScrollView>
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Creating your own Styles are essential for a consistent look and feel" />
+
+        <!-- 
+            Styles
+        -->
+        <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
+                   Text="Styles" />
+
+        <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                   Text="Images that should always be present in an application are often shipped with the app as a resource." />
+
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
