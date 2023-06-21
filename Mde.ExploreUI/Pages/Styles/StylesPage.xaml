@@ -4,19 +4,42 @@
              x:Class="Mde.ExploreUI.Pages.Styles.StylesPage"
              Title="Styles">
     <ScrollView>
-    <VerticalStackLayout>
-        <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                   Text="Creating your own Styles are essential for a consistent look and feel" />
+        <VerticalStackLayout>
 
-        <!-- 
-            Styles
-        -->
-        <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
-                   Text="Styles" />
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center">
+                <Label.Text>If you want to easily the appearance of multiple similar controls, you will need Styles. 
+They may be defined globally in a ResourceDictionary, or at the page-level.
+                </Label.Text>
+            </Label>
 
-        <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                   Text="Images that should always be present in an application are often shipped with the app as a resource." />
+            <!-- 
+                Styles
+            -->
 
-    </VerticalStackLayout>
+            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
+                       Text="Implicit Styles" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                       Text="Styles with only a TargetType defined are implicitly applied to all visual element which match the TargetType exactly." />
+
+            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
+                       Text="Explicit Styles" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                       Text="When a Style is given a unique x:Key value, it will only be applied to visual elements which reference the Style's Key." />
+
+            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
+                       Text="Style inhertance" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                       Text="Styles may inherit from others by using the BasedOn property." />
+
+            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
+                       Text="Style Classes" />
+
+            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
+                       Text="Classes are aliases for Styles which allow multiple Styles to be applied to a visual element." />
+
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
