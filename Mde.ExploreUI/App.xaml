@@ -8,6 +8,35 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary>
+
+                    <Shadow x:Key="basicShadow" Brush="#333" Offset="5,5" Opacity="0.6" />
+
+                    <Style x:Key="coolBorder" TargetType="Border">
+                        <Setter Property="BackgroundColor" Value="#ccc" />
+                        <Setter Property="Margin" Value="40,20" />
+                        <Setter Property="Padding" Value="20" />
+                        <Setter Property="StrokeShape" Value="RoundRectangle 5" />
+                        <Setter Property="Shadow" Value="{StaticResource basicShadow}" />
+                    </Style>
+
+                    <Style Class="HeaderText" TargetType="Label">
+                        <Setter Property="Margin" Value="0,15,0,0" />
+                        <Setter Property="FontSize" Value="18" />
+                        <Setter Property="HorizontalTextAlignment" Value="Center" />
+                    </Style>
+                    
+                    <Style Class="NormalText" TargetType="Label">
+                        <Setter Property="Margin" Value="0,10,0,25" />
+                        <Setter Property="FontSize" Value="12" />
+                        <Setter Property="HorizontalTextAlignment" Value="Center" />
+                    </Style>
+
+                    <Style Class="SuccessLabel" TargetType="Label">
+                        <Setter Property="TextColor" Value="DarkGreen" />
+                    </Style>
+                    
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

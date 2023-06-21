@@ -3,42 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.Styles.StylesPage"
              Title="Styles">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Blue" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="Shadow" Value="{StaticResource basicShadow}" />
+                <Setter Property="Margin" Value="0,10,0,5"></Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout>
 
-            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center">
-                <Label.Text>If you want to easily the appearance of multiple similar controls, you will need Styles. 
-They may be defined globally in a ResourceDictionary, or at the page-level.
-                </Label.Text>
+            <Label StyleClass="NormalText" >
+                <Label.Text>If you want to easily the appearance of multiple similar controls, you will need Styles. They may be defined in a ResourceDictionary, either globally in App.xaml, or at the page-level Resources.</Label.Text>
             </Label>
 
             <!-- 
-                Styles
+                Implicit Styles
             -->
+            <Label StyleClass="HeaderText" 
+                   Text="Implicit Styles" />
 
-            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
-                       Text="Implicit Styles" />
+            <Label StyleClass="NormalText" 
+                   Text="Styles with only a TargetType defined are implicitly applied to all visual element which match the TargetType exactly." />
 
-            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                       Text="Styles with only a TargetType defined are implicitly applied to all visual element which match the TargetType exactly." />
+            <Button Text="Every button on this page is blue" HorizontalOptions="Center" />
 
-            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
-                       Text="Explicit Styles" />
+            <Label Text="Every Label on this page has the same margin and shadow applied, unless overridden." />
 
-            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                       Text="When a Style is given a unique x:Key value, it will only be applied to visual elements which reference the Style's Key." />
+            <!-- 
+                Explicit Styles
+            -->
+            <Label StyleClass="HeaderText" Text="Explicit Styles" />
 
-            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
-                       Text="Style inhertance" />
+            <Label StyleClass="NormalText" 
+                   Text="When a Style is given a unique x:Key value, it will only be applied to visual elements which reference the Style's Key." />
 
-            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                       Text="Styles may inherit from others by using the BasedOn property." />
+            <Border Style="{StaticResource Key=coolBorder}">
+                <Label FontSize="12" HorizontalTextAlignment="Center"
+                       Text="The border around this Label references a Style named coolBorder. It's cool because we can reuse it very easily." />
+            </Border>
 
-            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
-                       Text="Style Classes" />
 
-            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                       Text="Classes are aliases for Styles which allow multiple Styles to be applied to a visual element." />
+            <Border Style="{StaticResource Key=coolBorder}" BackgroundColor="DarkRed">
+                <Label FontSize="12" HorizontalTextAlignment="Center" TextColor="White"
+                       Text="The border around this Label references a Style named coolBorder, but it overrides the background color." />
+            </Border>
+
+            <!-- 
+                Style Classes
+            -->
+            <Label StyleClass="HeaderText" Text="Style Classes" />
+
+            <Label StyleClass="NormalText" 
+                   Text="Classes are aliases for Styles which allow multiple Styles to be applied to a visual element." />
+
+            <Label StyleClass="HeaderText, SuccessLabel" Text="This label has both the HeaderText and SuccessLabel classes" />
+
+
+            <Label StyleClass="HeaderText" Padding="40"
+                   Text="Learning how Styles work before you start designing your UI is crucial!" />
 
         </VerticalStackLayout>
     </ScrollView>

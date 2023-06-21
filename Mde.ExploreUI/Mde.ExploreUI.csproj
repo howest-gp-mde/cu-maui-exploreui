@@ -55,14 +55,10 @@
 	  <None Remove="Resources\Fonts\LooneyTunes.ttf" />
 	  <None Remove="Resources\Fonts\Sacramento-Regular.ttf" />
 	  <None Remove="Resources\Images\alert.gif" />
-	  <None Remove="Resources\Images\alley.jpg" />
 	  <None Remove="resources\images\chaticon.svg" />
 	  <None Remove="Resources\Images\clouds.jpg" />
 	  <None Remove="Resources\Images\folder.gif" />
-	  <None Remove="Resources\Images\glider.svg" />
 	  <None Remove="Resources\Images\ignoredfolder\circlestack.svg" />
-	  <None Remove="Resources\Images\island.jpg" />
-	  <None Remove="Resources\Images\night.jpg" />
 	  <None Remove="Resources\Images\page_icon_1.svg" />
 	  <None Remove="Resources\Images\page_icon_2.svg" />
 	  <None Remove="Resources\Images\page_icon_3.svg" />
