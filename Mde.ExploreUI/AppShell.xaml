@@ -61,11 +61,11 @@
         <Tab Route="formessentials" Title="Essentials" Icon="page_icon_1">
             <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
         </Tab>
-        <Tab Route="buttons" Title="Button" Icon="page_icon_2">
-            <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
+        <Tab Route="buttons" Title="Buttons" Icon="page_icon_2">
+            <ShellContent ContentTemplate="{DataTemplate forms:ButtonsPage}" />
         </Tab>
         <Tab Route="pickers" Title="Pickers" Icon="page_icon_3">
-            <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
+            <ShellContent ContentTemplate="{DataTemplate forms:PickersPage}" />
         </Tab>
     </FlyoutItem>
 

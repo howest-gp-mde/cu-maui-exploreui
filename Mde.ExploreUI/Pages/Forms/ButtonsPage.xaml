@@ -3,10 +3,76 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.Forms.ButtonsPage"
              Title="Forms: Buttons">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="12" Spacing="5">
+
+            <!-- 
+                Buttons
+            -->
+
+            <Label StyleClass="HeaderText" Text="Buttons" />
+
+            <Label StyleClass="NormalText" 
+                   Text="Buttons are the most obvious way a user can perform commands on the UI" />
+
+            <Button x:Name="btnNormalButton"
+                    StyleClass="DefaultButton" 
+                    Text="Normal Button" />
+
+            <Button x:Name="btnDisabledButton"
+                    StyleClass="DefaultButton" 
+                    IsEnabled="False"
+                    Text="Disabled Button" />
+
+            <!-- 
+                Image Buttons
+            -->
+
+            <Label StyleClass="HeaderText" Text="Image Buttons" />
+
+            <Label StyleClass="NormalText" 
+                   Text="Image Buttons behave similarly to Buttons, but are entirely made up from an image. They are harder to style." />
+
+            <ImageButton x:Name="btnImageButton"
+                    StyleClass="DefaultButton" 
+                    Clicked="btnImageButton_Clicked"
+                    HeightRequest="60"
+                    Source="playbutton.png" />
+
+            <!-- 
+                Radio Buttons
+            -->
+
+            <Label StyleClass="HeaderText" Text="Radio Buttons" />
+
+            <Label StyleClass="NormalText" 
+                   Text="Radio buttons behave like a checkbox, but allow for more choices than a simple True or False." />
+
+            <Label Text="What's your favorite RGB color?" />
+            <VerticalStackLayout Margin="0,0,0,20" Spacing="0">
+                <RadioButton GroupName="Colors" TextColor="Red"  Content="Red" />
+                <RadioButton GroupName="Colors" TextColor="Green" Content="Green" />
+                <RadioButton GroupName="Colors" TextColor="Blue" Content="Blue" />
+            </VerticalStackLayout>
+
+            <Label Text="What's your favorite transportation?" />
+            <FlexLayout x:Name="radioButtonContainer" JustifyContent="SpaceEvenly" Margin="0,0,0,20"
+                        RadioButtonGroup.GroupName="Transportation">
+                <RadioButton Value="Bike" 
+                             FontFamily="FASolid" FontSize="20" Content="bicycle" />
+                <RadioButton Value="Car" 
+                             FontFamily="FASolid" FontSize="20" Content="car" />
+                <RadioButton Value="Airplane" 
+                             FontFamily="FASolid" FontSize="20" Content="plane" />
+                <RadioButton Value="Train" 
+                             FontFamily="FASolid" FontSize="20" Content="train" />
+            </FlexLayout>
+
+            <Button x:Name="btnSubmitFavorites" 
+                    StyleClass="DefaultButton"
+                    Margin="0,0,0,20"
+                    Text="Submit favorites"
+                    Clicked="btnSubmitFavorites_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

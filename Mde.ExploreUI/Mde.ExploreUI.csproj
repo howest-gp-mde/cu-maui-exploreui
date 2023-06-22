@@ -64,6 +64,7 @@
 	  <None Remove="Resources\Images\page_icon_3.svg" />
 	  <None Remove="Resources\Images\page_icon_4.svg" />
 	  <None Remove="Resources\Images\page_icon_5.svg" />
+	  <None Remove="Resources\Images\playbutton.png" />
 	  <None Remove="Resources\Images\theshard.png" />
 	  <None Remove="Resources\Images\yggdrasil.png" />
 	  <None Remove="Resources\Splash\splash.svg" />
