@@ -7,7 +7,7 @@
     xmlns:layouts="clr-namespace:Mde.ExploreUI.Pages.Layouts"
     xmlns:displaycontent="clr-namespace:Mde.ExploreUI.Pages.DisplayContent"
     xmlns:styles="clr-namespace:Mde.ExploreUI.Pages.Styles"
-    xmlns:alerts="clr-namespace:Mde.ExploreUI.Pages.Alerts"
+    xmlns:inform="clr-namespace:Mde.ExploreUI.Pages.Inform"
     xmlns:forms="clr-namespace:Mde.ExploreUI.Pages.Forms"
     Shell.FlyoutBehavior="Flyout">
 
@@ -48,8 +48,13 @@
         <ShellContent ContentTemplate="{DataTemplate styles:StylesPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Route="alerts" Title="Alerts">
-        <ShellContent ContentTemplate="{DataTemplate alerts:AlertsPage}" />
+    <FlyoutItem Route="inform" Title="Inform the user">
+        <Tab Route="alerts" Title="Alerts" Icon="page_icon_1">
+            <ShellContent ContentTemplate="{DataTemplate inform:AlertsPage}" />
+        </Tab>
+        <Tab Route="progress" Title="Progress" Icon="page_icon_2">
+            <ShellContent ContentTemplate="{DataTemplate inform:ProgressPage}" />
+        </Tab>
     </FlyoutItem>
     
     <FlyoutItem Route="forms" Title="Forms">
@@ -63,4 +68,5 @@
             <ShellContent ContentTemplate="{DataTemplate forms:FormsEssentialsPage}" />
         </Tab>
     </FlyoutItem>
+
 </Shell>

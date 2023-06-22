@@ -50,7 +50,6 @@
                        Text="The border around this Label references a Style named coolBorder. It's cool because we can reuse it very easily." />
             </Border>
 
-
             <Border Style="{StaticResource Key=coolBorder}" BackgroundColor="DarkRed">
                 <Label FontSize="12" HorizontalTextAlignment="Center" TextColor="White"
                        Text="The border around this Label references a Style named coolBorder, but it overrides the background color." />
@@ -65,7 +64,6 @@
                    Text="Classes are aliases for Styles which allow multiple Styles to be applied to a visual element." />
 
             <Label StyleClass="HeaderText, SuccessLabel" Text="This label has both the HeaderText and SuccessLabel classes" />
-
 
             <Label StyleClass="HeaderText" Padding="40"
                    Text="Learning how Styles work before you start designing your UI is crucial!" />

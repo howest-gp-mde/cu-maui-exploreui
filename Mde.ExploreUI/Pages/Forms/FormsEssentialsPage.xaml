@@ -3,9 +3,85 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mde.ExploreUI.Pages.Forms.FormsEssentialsPage"
              Title="Forms: Essentials">
-    <VerticalStackLayout>
-        <Label 
-            Text="" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="12" Spacing="5">
+
+            <Label StyleClass="HeaderText" Text="Character Sheet" />
+
+            <!-- 
+                Essential Forms
+            -->
+
+            <Grid ColumnDefinitions="Auto, 2*">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+                <Label Style="{StaticResource formField}" StyleClass="FormLabel, RightAlign" Grid.Column="0" Grid.Row="0"
+                       Text="Name"  />
+                <Entry Style="{StaticResource formField}" StyleClass="FormField" x:Name="txtName" 
+                       Grid.Column="1" Grid.Row="0" />
+
+                <Label StyleClass="FormLabel, RightAlign" Grid.Column="0" Grid.Row="1"
+                       Text="Level"  />
+                <HorizontalStackLayout Style="{StaticResource formField}" 
+                                       Grid.Column="1" Grid.Row="1" 
+                                       HorizontalOptions="Start">
+                    <Stepper x:Name="stpLevel"
+                             StyleClass="FormField, FormLabel"  HorizontalOptions="Fill"
+                             Minimum="0" Maximum="100" />
+                    <Label Text="{Binding Path=Value,Source={x:Reference stpLevel}}" 
+                           HorizontalOptions="End" VerticalOptions="Center" Padding="20,0,0,0"
+                           FontSize="25"/>
+                </HorizontalStackLayout>
+
+
+                <Label Style="{StaticResource formField}" VerticalTextAlignment="Center"  StyleClass="FormLabel, RightAlign" Grid.Column="0" Grid.Row="2"
+                       Text="Strength"  />
+                <Slider Style="{StaticResource formField}" x:Name="sldStrength"
+                       StyleClass="FormField, FormLabel" Grid.Column="1" Grid.Row="2"
+                       Minimum="0" Maximum="100" />
+
+
+                <Label Style="{StaticResource formField}" VerticalTextAlignment="Center"  StyleClass="FormLabel, RightAlign" Grid.Column="0" Grid.Row="3"
+                       Text="Magic"  />
+                <Slider Style="{StaticResource formField}" x:Name="sldMagic"
+                       StyleClass="FormField, FormLabel" Grid.Column="1" Grid.Row="3"
+                       Minimum="1" Maximum="100" />
+
+                <HorizontalStackLayout Grid.Column="0" Grid.Row="4" 
+                                       Grid.ColumnSpan="2"
+                                       HorizontalOptions="Center">
+                    <CheckBox x:Name="chkIsNPC"
+                              StyleClass="FormField, RightAlign"
+                              IsChecked="True" />
+                    <Label Style="{StaticResource formField}" StyleClass="FormField, FormLabel"
+                           Text="Playable Character" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Grid.Column="0" Grid.Row="5" 
+                                       Grid.ColumnSpan="2"
+                                       HorizontalOptions="Center">
+                    <Switch x:Name="swGodMode"
+                            StyleClass="FormField, RightAlign" />
+                    <Label Style="{StaticResource formField}" StyleClass="FormField, FormLabel"
+                           Text="Enable god mode" />
+                </HorizontalStackLayout>
+
+            </Grid>
+
+            <Button x:Name="btnSubmet"
+                    StyleClass="DefaultButton" 
+                    Text="Submit"
+                    Clicked="btnSubmit_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
     

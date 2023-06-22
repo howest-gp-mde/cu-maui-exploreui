@@ -2,7 +2,7 @@ using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using Font = Microsoft.Maui.Font;
 
-namespace Mde.ExploreUI.Pages.Alerts;
+namespace Mde.ExploreUI.Pages.Inform;
 
 public partial class AlertsPage : ContentPage
 {

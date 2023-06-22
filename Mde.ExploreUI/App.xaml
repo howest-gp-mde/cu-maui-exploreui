@@ -35,6 +35,27 @@
                     <Style Class="SuccessLabel" TargetType="Label">
                         <Setter Property="TextColor" Value="DarkGreen" />
                     </Style>
+
+                    <Style x:Key="formField" TargetType="View">
+                        <Setter Property="Margin" Value="10,5" />
+                        <Setter Property="MinimumHeightRequest" Value="50" />
+                        <Setter Property="VerticalOptions" Value="Center" />
+                    </Style>
+
+                    <Style Class="FormLabel" TargetType="Label">
+                        <Setter Property="VerticalOptions" Value="Center" />
+                        <Setter Property="VerticalTextAlignment" Value="Center" />
+                    </Style>
+
+                    <Style Class="RightAlign" TargetType="Label">
+                        <Setter Property="HorizontalOptions" Value="End" />
+                        <Setter Property="HorizontalTextAlignment" Value="End" />
+                    </Style>
+
+                    <Style Class="DefaultButton" TargetType="Button">
+                        <Setter Property="HorizontalOptions" Value="Center" />
+                        <Setter Property="Padding" Value="20,10" />
+                    </Style>
                     
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
