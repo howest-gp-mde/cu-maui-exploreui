@@ -63,18 +63,6 @@ When explicitly defining the UriImageSource, you can configfure how long the ima
                 </Image.Source>
             </Image>
 
-            <!-- 
-                Image from Stream
-            -->
-            <Label Margin="0,15,0,0" FontSize="18" HorizontalTextAlignment="Center"
-                   Text="Image from Stream" />
-
-            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                   Text="With a Stream, you can provide the raw bytes which make up the image. This enables loading images from any source: online, a local file, or directly from memory." />
-            
-            <Label Margin="0,10,0,5" FontSize="12" HorizontalTextAlignment="Center"
-                   Text="The image below was randomly generated and provided as a stream" />
-            <Image Source="clouds.jpg" />
 
             <!-- 
                Scaling Images

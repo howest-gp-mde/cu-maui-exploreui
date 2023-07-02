@@ -20,7 +20,6 @@
                 <ActivityIndicator x:Name="coloredBusyIndicator" IsRunning="True" />
             </FlexLayout>
             
-
             <!-- 
                 Progress Bar
             -->

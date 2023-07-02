@@ -6,14 +6,12 @@
     <ScrollView>
         <VerticalStackLayout Padding="12" Spacing="5">
 
-
             <Label StyleClass="NormalText" 
                    Text="Pickers allow an easy selection for the user" />
 
             <!-- 
                 Date Picker
             -->
-
             <Label StyleClass="HeaderText" Margin="0,30,0,0" Text="Date Picker" />
             <Label StyleClass="NormalText" Margin="0"
                    Text="Pick a date" />
@@ -25,7 +23,6 @@
             <!-- 
                 Time Picker
             -->
-
             <Label StyleClass="HeaderText" Margin="0,30,0,0" Text="Time Picker" />
             <Label StyleClass="NormalText" Margin="0"
                    Text="Pick a time" />
@@ -35,7 +32,7 @@
                         HorizontalOptions="Center" />
 
             <!-- 
-                Time Picker
+                Course Picker
             -->
             <Label StyleClass="HeaderText" Margin="0,30,0,0" Text="List Picker" />
             <Label StyleClass="NormalText" Margin="0" 
@@ -46,12 +43,12 @@
                     MinimumWidthRequest="200"
                     HorizontalOptions="Center" />
 
-            
             <Button x:Name="btnSubmit" 
                     StyleClass="DefaultButton"
                     Margin="0,30,0,20"
                     Text="Submit choices"
                     Clicked="btnSubmit_Clicked" />
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
