@@ -1,4 +1,3 @@
-using Android.Icu.Number;
 using Microsoft.Maui.Animations;
 using Microsoft.Maui.Layouts;
 
