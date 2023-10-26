@@ -24,21 +24,22 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Use the " />
-                        <Span Text="FormattedText" FontAttributes="Bold, Italic"></Span>
+                        <Span Text="FormattedText" BackgroundColor="Yellow" 
+                                FontAttributes="Bold, Italic" />
                         <Span Text=" property and the " />
-                        <Span Text="FormattedString"
-                              FontAttributes="Bold, Italic" TextColor="Green" FontSize="16" />
+                        <Span Text="FormattedString" FontSize="16"
+                                FontAttributes="Bold, Italic" TextColor="Green" />
                         <Span Text=" object to create " />
                         <Span Text="Formatted Text." 
-                              FontAttributes="Bold, Italic" TextColor="Red" />
+                                FontAttributes="Bold, Italic" TextColor="Red" />
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-            
+
             <Label Margin="0,5">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="When settings the " />
+                        <Span Text="When setting the " />
                         <Span Text="Text" FontAttributes="Bold, Italic" />
                         <Span Text=" property with the " />
                         <Span Text="Element Property notation" CharacterSpacing="5" />
